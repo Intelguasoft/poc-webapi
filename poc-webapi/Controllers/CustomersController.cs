@@ -12,7 +12,12 @@ namespace poc_webapi.Controllers
 {
     public class CustomersController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private ApplicationDbContext db;
+
+        public CustomersController()
+        {
+            db = new ApplicationDbContext();
+        }
 
         // GET: Customers
         public ActionResult Index()
